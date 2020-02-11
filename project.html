@@ -2,159 +2,221 @@
 <html>
   <head>
     <title>Project | Amanda Yang</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
   </head>
   <body>
-    <div class="topnav">
-      <a href="index.html">
-        <img src="logo.jpg" alt="Logo"><!--Need to put logo here-->
-      </a>
-      <a href="about.html">About</a>
-      <a href="project.html">Case Studies</a>
-      <a href="mailto:amyang6@gmail.com">Contact</a>
-    </div>
     <header>
-      <div class="hero-image"><!--Need to put image here-->
-      </div>
+      <a href="index.html"> <!-- Logo- Desktop 86x86, Mobile 32x32 and centered-->
+        <img src="images/logo.svg" alt="Logo">
+      </a>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="project.html">Case Studies</a>
+        <a href="mailto:amyang6@gmail.com">Contact</a>
+      </nav>
+    </header>
+      <section class="top-image">
+        <img src="images/bridgecloudcasestudieshero.svg" alt="BridgeCloud">
+      </section>
     </header>
     <main>
-      <section><!--Introduction to Project-->
-        <h1>BridgeCloud</h1>
-        <p>BridgeCloud provides a space to save, share, and create your most important files.</p>
+      <section class="project-intro"><!--Introduction to Project-->
         <ul class="roles">
-          <lh>My Roles</lh>
+          <li><h3>My Roles</h3></li>
           <li>Research</li>
           <li>User Testing</li>
           <li>Visual Design</li>
           <li>Prototyping</li>
         </ul>
-        <button>
-          <a href="https://invis.io/RMTG6NSFWGA#/378926203_Homepage">View Prototype</a>
-        </button>
+        <h1>BridgeCloud</h1>
+        <p>BridgeCloud provides a space to save, share, and create your most important files.</p>
+        <a href="https://invis.io/RMTG6NSFWGA#/378926203_Homepage" class="process-button">View Prototype</a>
       </section>
-      <section><!--Problem and Solution-->
-        <h1>Problem</h1>
-        <p>Through user research, I discovered that the cloud storage market is saturated with options that are difficult to use, are too expensive, or don’t offer enough space.</p>
-        <h2>Solution</h2>
-        <p>I developed a tested clickable prototype which allows users enough storage to sync their devices to the cloud, and share their files with anyone.</p>
+      <section class="problem-solution"><!--Problem and Solution-->
+        <div class="problem">
+          <h1 class="process">Problem</h1>
+          <p class="process">Through user research, I discovered that the cloud storage market is saturated with options that are difficult to use, are too expensive, or don’t offer enough space.</p>
+        </div>
+        <div class="solution">
+          <h1 class="process">Solution</h1>
+          <p class="process">I developed a tested clickable prototype which allows users enough storage to sync their devices to the cloud, and share their files with anyone.</p>
+        </div>
       </section>
-      <section><!--Research-->
-        <h1>Research</h1>
-        <p>I started with a survey and separated the users by which cloud service they used the most out of Google Drive, Dropbox, and Evernote. Nearly 87% of the participants said that preferred Google Drive over the other competition. Further, I found out that a large majority rarely or never use the commenting features in Google Drive, but they often used folders, shared their files, created content, and used the cloud as general storage.</p>
-        <canvas id="myChart"></canvas><!--Canvas for graph-->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script><!--Graph created with Chart.js will go here-->
-        <button>
-          <a href="https://forms.gle/uZ244LDp73crbt3H6">View Survey</a>
-        </button>
+      <section class="research"><!--Research-->
+        <h1 class="process">Research</h1>
+        <p class="process">I started with a survey and separated the users by which cloud service they used the most out of Google Drive, Dropbox, and Evernote. Nearly 87% of the participants said that preferred Google Drive over the other competition. Further, I found out that a large majority rarely or never use the commenting features in Google Drive, but they often used folders, shared their files, created content, and used the cloud as general storage.</p>
+        <canvas id="myChart" width="400" height="400"></canvas>
+        <script>
+        var ctx = document.getElementById('myChart');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        </script><!--Graph created with Chart.js will go here-->
+        <a href="https://forms.gle/uZ244LDp73crbt3H6" class="process-button">View Survey</a>
       </section>
-      <section><!--Competition-->
-        <h1>Competition</h1>
-        <p>Through conducting a competitive analysis, I found that storage plans separated the competition from each other. In addition, I analyzed user flows. Agreeing with the survey participants, useful features are often hidden in the UI of the competitors.</p>
-        <img src="url" alt="Google Logo"><!--Google logo goes here-->
-        <img src="url" alt="Everlane Logo"><!--Everlane logo goes here-->
-        <img src="url" alt="Dropbox Logo"><!--Dropbox logo goes here-->
-        <button>
-          <a href="https://docs.google.com/document/d/1UCCe_7Ha5tYq3nMqSLQRNLAMvGy2IWMfL0skYGYUlVM/edit?usp=sharing">View Results</a>
-        </button>
+      <section class="competition"><!--Competition-->
+        <div class="left-align">
+          <h1 class="process">Competition</h1>
+          <p class="process">Through conducting a competitive analysis, I found that storage plans separated the competition from each other. In addition, I analyzed user flows. Agreeing with the survey participants, useful features are often hidden in the UI of the competitors.</p>
+          <a href="https://docs.google.com/document/d/1UCCe_7Ha5tYq3nMqSLQRNLAMvGy2IWMfL0skYGYUlVM/edit?usp=sharing" class="process-button">View Results</a>
+        </div>
+        <div class="competition-logos">
+          <img class="google-logo" src="images/Asset - Google Drive Lockup.svg" alt="Google Logo"><!--Google logo-->
+          <img class="evernote-logo" src="images/evernote-ar21.svg" alt="Everlane Logo"><!--Everlane logo-->
+          <img class="dropbox-logo" src="images/Dropbox.svg" alt="Dropbox Logo"><!--Dropbox logo-->
+        </div>
       </section>
-      <section><!--Personas-->
-        <h1>Personas</h1>
-        <p>BridgeCloud users possess the following:</p>
-        <ul class="personas">
-          <lh>Goals</lh>
-          <li>Save backups</li>
-          <li>Share files</li>
-          <li>Create files for assignments or projects</li>
-          <lh>Frustrations</lh>
-          <li>Difficult to share with non-account users</li>
-          <li>Navigation is challenging</li>
-        </ul>
-        <img src="url" alt="Persona"><!--Need to put image here-->
-          <p>Patricia C. 20,<br>Los Angeles, CA</br>Busy University Student</p>
-        <button>
-          <a href="https://docs.google.com/presentation/d/1owzzlAGTFcH2ZkPYz1wucjJNzbdVqAc2g270ACp3RM0/edit#slide=id.g5cf3567ab6_0_40">View Personas</a>
-        </button>
+      <section class="personas"><!--Personas-->
+        <div class="left-align">
+          <h1 class="process">Personas</h1>
+          <p class="process">BridgeCloud users possess the following:</p><br></br>
+          <ul class="about-personas">
+            <lh>Goals</lh>
+            <li>- Save backups</li>
+            <li>- Share files</li>
+            <li>- Create files for assignments or projects</li><br></br>
+            <lh>Frustrations</lh>
+            <li>- Difficult to share with non-account users</li>
+            <li>- Navigation is challenging</li>
+          </ul>
+          <a href="https://docs.google.com/presentation/d/1owzzlAGTFcH2ZkPYz1wucjJNzbdVqAc2g270ACp3RM0/edit#slide=id.g5cf3567ab6_0_40" class="process-button">View Personas</a>
+        </div>
+        <div class="persona-image"><!--Persona Image-->
+          <img class="horizontal-image" src="images/bridgecloudpersona1.jpg" alt="Persona">
+          <ul class="about-patricia" style="list-style-type:none;">
+            <div class="persona-name"><li>Patricia C. 20,</li></div>
+            <li>Los Angeles, CA</li>
+            <li>Busy University Student</li>
+          </ul>
+        </div>
       </section>
-      <section><!--User Stories + MVPs-->
-        <h1>User Stories + MVPs</h1>
-        <p>To meet the goals and solve the frustrations of the users, the MVP should have users be able to keep their files safe and create or add new files. The functions should include creating an account, uploading items from their device, and creating new items from the dashboard. Administrators should have access to users’ clouds and be able to unlock their accounts and recover any data that may be lost.</p>
-        <button>
-          <a href="https://docs.google.com/spreadsheets/d/1LEWosUhgWyEhjEvtxpy6h72pEtv2YcWrZfIHIs6pHd8/edit?usp=sharing">View User Stories</a>
-        </button>
+      <section class="user-stories-mvp"><!--User Stories + MVPs-->
+        <h1 class="process">User Stories + MVPs</h1>
+        <div class="horizontal-alignment">
+          <p class="process">To meet the goals and solve the frustrations of the users, the MVP should have users be able to keep their files safe and create or add new files. The functions should include creating an account, uploading items from their device, and creating new items from the dashboard. Administrators should have access to users’ clouds and be able to unlock their accounts and recover any data that may be lost.</p>
+          <a href="https://docs.google.com/spreadsheets/d/1LEWosUhgWyEhjEvtxpy6h72pEtv2YcWrZfIHIs6pHd8/edit?usp=sharing" class="horizontal-align-button">View User Stories</a>
+        </div>
       </section>
-      <section><!--User Flows-->
-        <h1>User Flows</h1>
-        <p>For my first iteration of the onboarding user flow, I attempted to create a sense of hierarchy and placed the information about the storage plans on a separate page from the homepage. However through user testing,</p>
-        <p><b>I found that creating hierarchy by hiding information wasn’t the best for onboarding and teaching new users about the product.</b> </p>
-        <p>I was able to put all the information about the business and the product on the homepage and make the user flow more simplified.</p>
-        <img src="url" alt="User Flow"> <!--Need to put image here-->
+      <section class="user-flows"><!--User Flows-->
+        <h1 class="process">User Flows</h1>
+        <p class="process">For my first iteration of the onboarding user flow, I attempted to create a sense of hierarchy and placed the information about the storage plans on a separate page from the homepage. However through user testing,<br><br>I found that creating hierarchy by hiding information wasn’t the best for onboarding and teaching new users about the product.<br><br>I was able to put all the information about the business and the product on the homepage and make the user flow more simplified.</p>
+        <img class="horizontal-image" src="images/bridgeclouduserflowfinal.png" alt="User Flow"> <!--Final User Flow Image-->
+        <a href="https://drive.google.com/open?id=1ifECup07-0UO9Fr4opkLXzd_4WGdag5l" class="process-button">View User Flows</a>
       </section>
-      <section><!--Wireframes-->
-        <h1>Wireframes</h1>
-        <p>For my first set of wireframes, I still had a very vague idea of what was going to work design-wise to help with onboarding. After feedback and more research, I came up with the final wireframes. Adding the login and purchase buttons to the top make it easier for returning users to login and find the purchase button.</p>
-        <button>
-          <a href="https://drive.google.com/open?id=1UwsJE_w6ENfbll9Zz2GHBDPhV7Z0AA7B">View Wireframes</a>
-        </button>
-        <img src="url" alt="Homepage Wireframe First Iteration"> <!--Need to put image here-->
-        <img src="url" alt="Usability Test Result"> <!--Need to put image here-->
-        <<img src="url" alt="Homepage Final Wireframe"> <!--Need to put image here-->
+      <section class="wireframes"><!--Wireframes-->
+        <h1 class="process">Wireframes</h1>
+        <p class="process">For my first set of wireframes, I still had a very vague idea of what was going to work design-wise to help with onboarding. After feedback and more research, I came up with the final wireframes. Adding the login and purchase buttons to the top make it easier for returning users to login and find the purchase button.</p>
+        <a href="https://drive.google.com/open?id=1UwsJE_w6ENfbll9Zz2GHBDPhV7Z0AA7B" class="process-button">View Wireframes</a>
+        <div class="iterations">
+          <img class="vertical-image" src="images/bridgecloudhomepagewireframefirst.png" alt="Homepage Wireframe First Iteration"><!--Homepage Wireframe First Iteration Image-->
+          <img class="horizontal-image" src="images/bridgecloudusabilitytestresult.jpg" alt="Usability Test Result"><!--Usability Test Image-->
+          <img class="vertical-image" src="images/bridgecloudhomepagewireframefinal.png" alt="Homepage Final Wireframe"><!--Final Wireframe Image-->
+        </div>
       </section>
-      <section><!--Testing Wireframes-->
-        <h1>Testing Wireframes</h1>
-        <p>During the usability test using just the wireframes, I found that users had a hard time understanding what product we were offering, so I wanted to make that information more easily visible.</p>
-        <button>
-          <a href="https://docs.google.com/document/d/1sc_D8vHcs7PrMqEH5AAWrQ7hyH6L1Qmv40ekybb9elI/edit?usp=sharing">View Results</a>
-        </button>
+      <section class="testing"><!--Testing Wireframes-->
+        <h1 class="process">Testing Wireframes</h1>
+        <div class="horizontal-alignment">
+          <p class="process">During the usability test using just the wireframes, I found that users had a hard time understanding what product we were offering, so I wanted to make that information more easily visible.</p>
+          <a href="https://docs.google.com/document/d/1sc_D8vHcs7PrMqEH5AAWrQ7hyH6L1Qmv40ekybb9elI/edit?usp=sharing" class="horizontal-align-button">View Results</a>
+        </div>
       </section>
-      <section><!--Branding-->
-        <h1>Branding</h1>
-        <p>When finding a direction for our branding, I started with mind mapping words associated with clouds, storage, and sharing.</p>
-        <p>For the moodboard, I wanted to include curved lines similar to bridges. I chose blue as the main color to instill trust in the brand and orange to represent creativity and change.</p>
-        <img src="url" alt="Mindmapping"> <!--Need to put image here-->
-        <img src="url" alt="Moodboard"> <!--Need to put image here-->
+      <section class="branding"><!--Branding-->
+        <h1 class="process">Branding</h1>
+        <div class="horizontal-alignment">
+          <p class="process">When finding a direction for our branding, I started with mind mapping words associated with clouds, storage, and sharing.<br><br>For the moodboard, I wanted to include curved lines similar to bridges. I chose blue as the main color to instill trust in the brand and orange to represent creativity and change.</br></br></p>
+          <img class="sketch" src="images/bridgecloudmindmapping.jpg" alt="Mindmapping"> <!--Mindmapping Image-->
+          <img class="horizontal-image" src="images/bridgecloudmoodboard.jpg" alt="Moodboard"> <!--Moodboard Image-->
+        </div>
       </section>
-      <section><!--Logo-->
-        <h1>Logo</h1>
-        <p>After a few sketches, I decided on the more abstract and simple design for a more professional look and I didn’t want the image to overpower the name.</p>
-        <p>The typography that I used in the logo is unique and bold to represent that a user’s account is filled with personal items. I paired this with a simple yet slightly rounded typeface to bring friendliness to the brand.</p>
-        <img src="url" alt="Logo Sketches"> <!--Need to put image here-->
-        <img src="url" alt="Final Logo Versions"> <!--Need to put image here-->
+      <section class="logo"><!--Logo-->
+        <h1 class="process">Logo</h1>
+        <div class="horizontal-alignment">
+          <p class="process">After a few sketches, I decided on the more abstract and simple design for a more professional look and I didn’t want the image to overpower the name. <br><br>The typography that I used in the logo is unique and bold to represent that a user’s account is filled with personal items. I paired this with a simple yet slightly rounded typeface to bring friendliness to the brand.</br></br></p>
+          <img class="sketch" src="images/bridgecloudlogosketches.jpg" alt="Logo Sketches"> <!--Logo Sketches Image-->
+          <img class="horizontal-image" src="images/bridgecloudlogovariations.png" alt="Final Logo Versions"> <!--Final Logo Variations Image-->
+        </div>
       </section>
-      <section><!--Mockups + Prototypes-->
-        <h1>Mockups + Prototypes</h1>
-        <p>After testing my first prototype, I found that users prefer simpler images, so I moved forward with cleaner images for easier readability. Next, I utilized white space more efficiently and made the images compete even less with the text.</p>
-        <img src="url" alt="Homepage Mockup First Iteration"> <!--Need to put image here-->
-        <img src="url" alt="Homepage Mockup Second Iteration"> <!--Need to put image here-->
-        <img src="url" alt="Homepage Mockup Final Iteration"> <!--Need to put image here-->
+      <section class="mockups-prototypes"><!--Mockups + Prototypes-->
+        <h1 class="process">Mockups + Prototypes</h1>
+        <p class="process">After testing my first prototype, I found that users prefer simpler images, so I moved forward with cleaner images for easier readability. Next, I utilized white space more efficiently and made the images compete even less with the text.</p>
+        <div class="iterations">
+          <img class="vertical-image" src="images/bridgecloudhomepagefirst.png" alt="Homepage Mockup First Iteration"> <!--First Homepage High Fidelity Mockup Image-->
+          <img class="vertical-image" src="images/bridgecloudhomepagesecond.png" alt="Homepage Mockup Second Iteration"> <!--Second Homepage High Fidelity Mockup Image-->
+          <img class="vertical-image" src="images/bridgecloudhomepagefinal.png" alt="Homepage Mockup Final Iteration"> <!--FInal Homepage High Fidelity Mockup Image-->
+        </div>
       </section>
-      <section><!--User Testing-->
-        <h1>User Testing</h1>
-        <p>Testing the prototype, the participants didn’t have too much trouble with navigating the site, but I learned the importance of including microcopy.</p>
-        <img src="url" alt="Usability Test Result"> <!--Need to put image here-->
-        <img src="url" alt="Dashboard Empty"> <!--Need to put image here-->
-        <button>
-          <a href="https://docs.google.com/document/d/11xR6Oa55MuRNITcr-1ikDqGmzwB3mXUAGCVYQAwx2WM/edit?usp=sharing">View Results</a>
-        </button>
+      <section class="user-testing"><!--User Testing-->
+        <div class="left-align">
+          <h1 class="process">User Testing</h1>
+          <p class="process">Testing the prototype, the participants didn’t have too much trouble with navigating the site, but I learned the importance of including microcopy.</p>
+          <a href="https://docs.google.com/document/d/11xR6Oa55MuRNITcr-1ikDqGmzwB3mXUAGCVYQAwx2WM/edit?usp=sharing" class="process-button">View Results</a>
+        </div>
+        <div class="user-testing-results">
+          <img class="horizontal-image" src="images/bridgeclouddashboardusabilitytest.jpg" alt="Usability Test Result"> <!--Dashboard Usability Test Image-->
+          <img class="horizontal-image" src="images/bridgeclouddashboardempty.png" alt="Dashboard Empty"> <!--Empty Dashboard Image-->
+        </div>
       </section>
-      <section><!--Conclusion-->
-        <h1>Conclusion</h1>
-        <p>I began this project not knowing much about how we could create a product in an already saturated market. Research helped me greatly in identifying what features I would include, and how to differentiate this product from its competitors. BridgeCloud is designed for the well-being of its users where they can feel secure in storing and sharing their files easily.</p>
+      <section class="conclusion"><!--Conclusion-->
+        <h1 class="process">Conclusion</h1>
+        <p class="process">I began this project not knowing much about how we could create a product in an already saturated market. Research helped me greatly in identifying what features I would include, and how to differentiate this product from its competitors. BridgeCloud is designed for the well-being of its users where they can feel secure in storing and sharing their files easily.</p>
       </section>
-      <section><!--Contact-->
+      <section class="project"><!--Contact-->
         <h1>Let's work together!</h1>
-        <p>I’m always open to chat about design or beginning new projects. Please contact me if you’re interested in creating something great together!</p>
-        <button>
-          <a href="mailto:amyang6@gmail.com">Contact</a>
-        </button>
+        <div class="horizontal-alignment">
+          <p>I’m always open to chat about design or beginning new projects. Please contact me if you’re interested in creating something great together!</p>
+          <a href="mailto:amyang6@gmail.com" class="horizontal-align-button">Contact</a>
+        </div>
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> <!--Back to top button-->
       </section>
     </main>
     <footer>
-      <ul class="social-networking">
-        <li><a href="mailto:amyang6@gmail.com">Email</a></li>
-        <li><a href="https://www.linkedin.com/in/amanda-l-yang/">LinkedIn</a></li>
-        <li><a href="https://github.com/amanda-yang6">GitHub</a></li>
+      <section class="social-networking"><!--Need to put icons-->
+        <a href="mailto:amyang6@gmail.com">
+          <img src="images/mail.svg" alt="Email">
+        </a>
+        <a href="https://www.linkedin.com/in/amanda-l-yang/">
+          <img src="images/linkedin.svg" alt="Linkedin">
+        </a>
+        <a href="https://github.com/amanda-yang6">
+          <img src="images/github.svg" alt="Github">
+        </a>
+      </section>
     </footer>
   </body>
 </html>

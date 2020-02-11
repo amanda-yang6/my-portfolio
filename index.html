@@ -2,44 +2,55 @@
 <html>
   <head>
     <title>Portfolio | Amanda Yang</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
   </head>
   <body>
-    <div class="topnav">
-      <a href="index.html"><!--Logo goes here-->
-        <img src="logo.jpg" alt="Logo">
-      </a>
-      <a href="about.html">About</a>
-      <a href="project.html">Case Studies</a>
-      <a href="mailto:amyang6@gmail.com">Contact</a>
-    </div>
     <header>
-      <div class="hero-image">
-        <img src="tokyo.jpg" alt="Tokyo skyline"><!--Need to put image here-->
+      <a href="index.html"> <!-- Logo- Desktop 86x86, Mobile 32x32 and centered-->
+        <img src="images/logo.svg" alt="Logo">
+      </a>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="project.html">Case Studies</a>
+        <a href="mailto:amyang6@gmail.com">Contact</a>
+      </nav>
+    </header>
+      <section class="hero">
         <div class="hero-text">
           <h1>Nice to meet you!</h1>
-          <p>I am a research focused UX Designer based in San Francisco. I love getting to exercise my imagination through storytelling.</p>
+          <h2>I am a research focused UX Designer based in San Francisco.</h2>
+          <h2>I love getting to exercise my imagination through storytelling.</h2>
         </div>
-      </div>
-    </header>
+      </section>
     <main>
-      <section><!--Project-->
-        <img src="bridgecloudhomepage.jpg" alt="BridgeCloud Homepage"><!--Need to put image here-->
+      <section class="project"><!--Project-->
+        <div class="bridgecloud">
+          <img src="images/bridgecloudhomepagelaptop.svg" alt="BridgeCloud Homepage">
+        </div>
         <h1>BridgeCloud</h1>
-        <p>This cloud storage service lets you sync all of your files and share from one space.</p>
-        <button>
-          <a href="project.html">Read Case Study</a>
-        </button>
+        <h2>This cloud storage service lets you sync all of your files and share from one space.</h2>
+        <a href="project.html" class="button">Read Case Study</a>
       </section>
     </main>
     <footer>
-      <h1>Get in touch</h1>
-      <p>Interested in collaborating or chatting about UX design? Reach me at <a href="mailto:amyang6@gmail.com"><b>amyang6@gmail.com</b></a></p>
-      <ul class="social-networking"><!--Need to put icons-->
-        <li><a href="mailto:amyang6@gmail.com">Email</a></li>
-        <li><a href="https://www.linkedin.com/in/amanda-l-yang/">LinkedIn</a></li>
-        <li><a href="https://github.com/amanda-yang6">GitHub</a></li>
+      <section class="contact">
+        <h1>Get in touch</h1>
+        <p>Interested in collaborating or chatting about UX design? Reach me at <a style="font-weight:bold" href="mailto:amyang6@gmail.com">amyang6@gmail.com</a></p>
+      </section>
+      <section class="social-networking"><!--Need to put icons-->
+        <a href="mailto:amyang6@gmail.com">
+          <img src="images/mail.svg" alt="Email">
+        </a>
+        <a href="https://www.linkedin.com/in/amanda-l-yang/">
+          <img src="images/linkedin.svg" alt="Linkedin">
+        </a>
+        <a href="https://github.com/amanda-yang6">
+          <img src="images/github.svg" alt="Github">
+        </a>
+      </section>
     </footer>
   </body>
 </html>

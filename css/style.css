@@ -1,0 +1,328 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "project";
+  font-family: 'Lato';
+  font-size: 2.0rem;
+  color: #292728; /* black */
+}
+
+html {
+  font-size: 10px;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Yeseva One';
+  font-size: 5.6rem; /* 56px */
+}
+
+h2 {
+  font-size: 2.8rem; /* 28px */
+  line-height: 36px;
+}
+
+/* Buttons*/
+.button, .horizontal-align-button, .process-button {
+  display: inline-block;
+  background-color: #C2E2FF; /* blue */
+  box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  padding: 24px 40px;
+  text-align: center;
+  width: 284px;
+}
+
+.horizontal-align-button {
+  margin-left: 318px;
+}
+
+.project-intro .button {
+  margin-top: 48px;
+}
+
+.process-button {
+  margin-top: 64px;
+}
+
+.user-flows .process-button {
+  display: block;
+  margin: auto;
+}
+
+/* Images */
+.branding img, .logo img, .mockups-prototypes img, .personas img, .sketch, .user-flows img, .user-testing img, .wireframes img {
+  border: 1px solid;
+  border-color: #C4C4C4;
+}
+
+.branding .horizontal-image, .logo .horizontal-image, .user-testing .horizontal-image {
+  display: inline-block;
+  margin-left: 51px;
+}
+
+.horizontal-image {
+  max-height: 384px;
+}
+
+.vertical-image {
+  max-height: 432px;
+}
+
+.iterations img {
+  max-width: 434px;
+  margin-right: 66px;
+}
+
+.iterations img, .wireframes img {
+  margin-top: 64px;
+}
+
+.user-flows img {
+  display: block;
+  margin: 64px auto;
+}
+
+.sketch {
+  max-width: 349px;
+}
+
+.user-testing-results, .persona-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-testing img {
+  max-height: 232px;
+}
+
+
+/* Top Navigation */
+a { /* Link styles */
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #292728; /* black */
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+header img { /* Logo */
+  max-width: 86px;
+}
+
+nav { /* Navigation links */
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 56px;
+}
+
+/* Homepage Hero */
+.hero {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/tokyoskyline.jpg) top / cover;
+  display: flex;
+  height: 672px;
+  justify-content: center;
+}
+
+.hero .hero-text {
+  color: #FFFDF9; /* white */
+  margin: auto;
+  text-align: center;
+}
+
+.hero-text h1 {
+  margin-bottom: 48px;
+}
+
+/* Homepage Content */
+.project {
+  margin: 144px 128px;
+}
+
+.project .bridgecloud { /* Image */
+  float: right;
+  max-width: 684px;
+  position: relative;
+}
+
+.project h1 {
+  margin-bottom: 56px;
+}
+
+.project h2 {
+  margin-bottom: 96px;
+  max-width: 484px;
+}
+
+/* Case Study Page */
+
+main {
+  margin: 0px;
+  padding: 0px;
+}
+
+main p, .about-personas, .about-patricia {
+  line-height: 26px;
+  max-width: 584px;
+}
+
+.about-patricia {
+  margin-top: 32px;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-personas lh {
+  font-weight: bold;
+}
+
+.branding p, .logo p, .user-testing p {
+  margin-right: 66px;
+  max-width: 384px;
+}
+
+.branding, .competition, .conclusion, .logo, .mockups-prototypes, .personas, .research, .testing, .user-stories-mvp, .user-testing, .user-flows, .wireframes {
+  border-top: 1px solid;
+  border-color: #DFCCC8;
+  padding: 80px 128px;
+}
+
+.competition, .user-testing, .personas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.competition-logos, .persona-image {
+  display: flex;
+  flex-direction: column;
+}
+
+.competition img {
+  width: 70%;
+}
+
+.conclusion {
+  border-bottom: 1px solid;
+  border-color: #DFCCC8;
+  text-align: center;
+}
+
+.conclusion, .logo, .testing, .personas {
+  background-color: #F6F6F6;
+}
+
+.conclusion p {
+  margin: auto;
+}
+
+.horizontal-alignment p, .horizontal-align-button, .wireframes img, .sketch {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.mockups-prototypes, .user-flows, .wireframes {
+  text-align: center;
+}
+
+.persona-name {
+  font-size: 2.4rem;
+  line-height: 28px;
+}
+
+.problem-solution {
+  border-top: 1px solid;
+  border-color: #DFCCC8;
+  columns: 534px 2;
+  column-rule: 1px solid #DFCCC8;
+  text-align: center;
+}
+
+.problem, .solution {
+  padding: 80px 128px;
+}
+
+.project-intro {
+  margin: 66px 228px;
+}
+
+.project-intro h1 {
+  margin-bottom: 40px;
+}
+
+.project-intro p {
+  max-width: 484px;
+}
+
+.project-intro .roles {
+  border: 3px solid;
+  border-color: #DFCCC8;
+  border-radius: 50%;
+  height: 284px;
+  float: right;
+  line-height: 26px;
+  text-align: center;
+  width: 284px;
+}
+
+.research {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../images/bridgecloudresearchbackground.jpg) bottom / cover;
+}
+
+.roles h3 {
+  font-size: 2.0rem;
+  margin-bottom: 20px;
+  margin-top: 64px;
+  text-transform: uppercase;
+}
+
+.user-flows {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url(../images/bridgeclouduserflowsbackground.jpg) center / cover;
+}
+
+.user-flows p, .wireframes p, .mockups-prototypes p { /* Centered content */
+  margin: auto;
+}
+
+/* Contact */
+.contact {
+  background-color: #EDEDED;
+  padding: 32px;
+  text-align: center;
+}
+
+.contact h1, h1.process {
+  margin-bottom: 32px;
+}
+
+/* Footer */
+.social-networking {
+  background-color: #EDEDED;
+  display: flex;
+  justify-content: center;
+  margin: auto auto auto;
+}
+
+.social-networking img {
+  padding: 28px;
+}
+
+.top-image {
+  background-color: #F6F6F6;
+  display: flex;
+  height: 672px;
+}
+
+.top-image img {
+  align-items: center;
+  margin: auto auto auto;
+}
