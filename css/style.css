@@ -2,27 +2,91 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   display: grid;
   grid-template-areas: "project";
   font-family: 'Lato';
-  font-size: 2.0rem;
+  font-size: 1.2rem;
   color: #292728; /* black */
-}
-
-html {
-  font-size: 10px;
 }
 
 /* Typography */
 h1 {
   font-family: 'Yeseva One';
-  font-size: 5.6rem; /* 56px */
+  font-size: 2.0rem;
 }
 
 h2 {
-  font-size: 2.8rem; /* 28px */
-  line-height: 36px;
+  font-size: 1.6rem;
+  line-height: 20px;
+}
+
+/* Top Navigation */
+a { /* Link styles */
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #292728; /* black */
+}
+
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header img { /* Logo */
+  max-width: 32px;
+  margin: 16px;
+}
+
+nav { /* Right aligned navigation links */
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 24px;
+}
+
+/* Homepage Hero */
+.hero {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/tokyoskyline.jpg) top / cover;
+  display: flex;
+  height: 375px;
+  justify-content: center;
+}
+
+.hero .hero-text {
+  color: #FFFDF9; /* white */
+  margin: auto;
+  text-align: center;
+}
+
+.hero-text h1 {
+  margin-bottom: 20px;
+}
+
+/* Projects Listed on Homepage */
+.bridgecloud img { /* Project Image */
+  max-width: 327px;
+  margin-bottom: 32px;
+}
+
+.project {
+  display: block;
+  margin: 32px 24px;
+  justify-content: center;
+  text-align: center;
+}
+
+.project h1 {
+  margin-bottom: 8px;
+}
+
+.project h2 {
+  margin-bottom: 24px;
 }
 
 /* Buttons*/
@@ -33,7 +97,7 @@ h2 {
   font-weight: bold;
   padding: 24px 40px;
   text-align: center;
-  width: 284px;
+  width: 201px;
 }
 
 .horizontal-align-button {
@@ -41,19 +105,118 @@ h2 {
 }
 
 .project-intro .button {
-  margin-top: 48px;
+  margin-top: 24px;
 }
 
-.process-button {
-  margin-top: 64px;
+/* Footer */
+.social-networking {
+  background-color: #EDEDED;
+  display: flex;
+  justify-content: center;
+  margin: auto auto auto;
 }
 
-.user-flows .process-button {
-  display: block;
-  margin: auto;
+.social-networking img {
+  padding: 28px;
+}
+
+.contact h1, h1.process {
+  margin-bottom: 8px;
+}
+
+/* Desktop View */
+@media all and (min-width:991px) {
+  body {
+    font-size: 2.0rem;
+  }
+
+  h1 {
+    font-size: 5.6rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+    line-height: 36px;
+  }
+
+  nav { /* Navigation links */
+    grid-gap: 56px;
+  }
+
+  header {
+    flex-direction: row;
+    padding: 32px;
+  }
+
+  header img { /* Logo */
+    max-width: 86px;
+  }
+
+  .hero {
+    height: 672px;
+  }
+
+  .hero-text h1 {
+    margin-bottom: 48px;
+  }
+
+  .project {
+    margin: 144px 128px;
+    text-align: left;
+  }
+
+  .project .bridgecloud { /* Project Image */
+    float: right;
+    max-width: 684px;
+    position: relative;
+  }
+
+  .project h1 {
+    margin-bottom: 56px;
+  }
+
+  .project h2 {
+    margin-bottom: 96px;
+    max-width: 484px;
+  }
+
+  .button {
+    width: 284px;
+  }
+
+  .horizontal-align-button {
+    margin-left: 318px;
+  }
+
+  .project-intro .button {
+    margin-top: 48px;
+  }
+
+  .process-button {
+    margin-top: 64px;
+  }
+
+  .social-networking img {
+    padding: 28px;
+  }
+
+  .contact h1, h1.process {
+    margin-bottom: 32px;
+  }
 }
 
 /* Images */
+.top-image {
+  background-color: #F6F6F6;
+  display: flex;
+  height: 672px;
+}
+
+.top-image img {
+  align-items: center;
+  margin: auto auto auto;
+}
+
 .branding img, .logo img, .mockups-prototypes img, .personas img, .sketch, .user-flows img, .user-testing img, .wireframes img {
   border: 1px solid;
   border-color: #C4C4C4;
@@ -98,69 +261,6 @@ h2 {
 
 .user-testing img {
   max-height: 232px;
-}
-
-
-/* Top Navigation */
-a { /* Link styles */
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #292728; /* black */
-}
-
-header {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding: 32px;
-}
-
-header img { /* Logo */
-  max-width: 86px;
-}
-
-nav { /* Navigation links */
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 56px;
-}
-
-/* Homepage Hero */
-.hero {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/tokyoskyline.jpg) top / cover;
-  display: flex;
-  height: 672px;
-  justify-content: center;
-}
-
-.hero .hero-text {
-  color: #FFFDF9; /* white */
-  margin: auto;
-  text-align: center;
-}
-
-.hero-text h1 {
-  margin-bottom: 48px;
-}
-
-/* Homepage Content */
-.project {
-  margin: 144px 128px;
-}
-
-.project .bridgecloud { /* Image */
-  float: right;
-  max-width: 684px;
-  position: relative;
-}
-
-.project h1 {
-  margin-bottom: 56px;
-}
-
-.project h2 {
-  margin-bottom: 96px;
-  max-width: 484px;
 }
 
 /* Case Study Page */
@@ -298,31 +398,4 @@ main p, .about-personas, .about-patricia {
   background-color: #EDEDED;
   padding: 32px;
   text-align: center;
-}
-
-.contact h1, h1.process {
-  margin-bottom: 32px;
-}
-
-/* Footer */
-.social-networking {
-  background-color: #EDEDED;
-  display: flex;
-  justify-content: center;
-  margin: auto auto auto;
-}
-
-.social-networking img {
-  padding: 28px;
-}
-
-.top-image {
-  background-color: #F6F6F6;
-  display: flex;
-  height: 672px;
-}
-
-.top-image img {
-  align-items: center;
-  margin: auto auto auto;
 }
