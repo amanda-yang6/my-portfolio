@@ -25,6 +25,10 @@ h2 {
   line-height: 20px;
 }
 
+p {
+  line-height: 15px;
+}
+
 /* Top Navigation */
 a { /* Link styles */
   text-decoration: none;
@@ -109,6 +113,12 @@ nav { /* Right aligned navigation links */
 }
 
 /* Footer */
+.contact {
+  background-color: #EDEDED;
+  padding: 16px;
+  text-align: center;
+}
+
 .social-networking {
   background-color: #EDEDED;
   display: flex;
@@ -117,7 +127,8 @@ nav { /* Right aligned navigation links */
 }
 
 .social-networking img {
-  padding: 28px;
+  padding: 16px;
+  height: 10vmax;
 }
 
 .contact h1, h1.process {
@@ -165,7 +176,7 @@ nav { /* Right aligned navigation links */
     text-align: left;
   }
 
-  .project .bridgecloud { /* Project Image */
+  .bridgecloud img { /* Project Image */
     float: right;
     max-width: 684px;
     position: relative;
@@ -198,10 +209,25 @@ nav { /* Right aligned navigation links */
 
   .social-networking img {
     padding: 28px;
+    height: 7vmax;
+  }
+
+  .contact {
+    padding: 32px;
   }
 
   .contact h1, h1.process {
     margin-bottom: 32px;
+  }
+
+  main {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  main p, .about-personas, .about-patricia {
+    line-height: 26px;
+    max-width: 584px;
   }
 }
 
@@ -264,17 +290,6 @@ nav { /* Right aligned navigation links */
 }
 
 /* Case Study Page */
-
-main {
-  margin: 0px;
-  padding: 0px;
-}
-
-main p, .about-personas, .about-patricia {
-  line-height: 26px;
-  max-width: 584px;
-}
-
 .about-patricia {
   margin-top: 32px;
   justify-content: center;
@@ -391,11 +406,4 @@ main p, .about-personas, .about-patricia {
 
 .user-flows p, .wireframes p, .mockups-prototypes p { /* Centered content */
   margin: auto;
-}
-
-/* Contact */
-.contact {
-  background-color: #EDEDED;
-  padding: 32px;
-  text-align: center;
 }
