@@ -14,10 +14,22 @@ body {
   color: #292728; /* black */
 }
 
+@media all and (min-width:991px) {
+  body {
+    font-size: 2.0rem;
+  }
+}
+
 /* Typography */
 h1 {
   font-family: 'Yeseva One';
   font-size: 2.0rem;
+}
+
+@media all and (min-width:991px) {
+  h1 {
+    font-size: 5.6rem;
+  }
 }
 
 h2 {
@@ -25,8 +37,75 @@ h2 {
   line-height: 20px;
 }
 
+@media all and (min-width:991px) {
+  h2 {
+    font-size: 2.8rem;
+    line-height: 36px;
+  }
+}
+
 p {
   line-height: 15px;
+}
+
+/* Buttons*/
+.button, .horizontal-align-button, .last-button, .process-button {
+  display: inline-block;
+  background-color: #C2E2FF; /* blue */
+  box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  margin: auto;
+  padding: 24px 40px;
+  text-align: center;
+  width: 201px;
+}
+
+@media all and (min-width: 991px) {
+  .button, .horizontal-align-button, .last-button, .process-button {
+    margin: 0px;
+    width: 284px;
+  }
+}
+
+.horizontal-align-button, .last-button, .process-button {
+  margin-top: 32px;
+}
+
+@media all and (min-width:991px) {
+  .horizontal-align-button {
+    margin-left: 318px;
+    margin-top: 0px;
+  }
+}
+
+.last-button {
+  order: 4;
+}
+
+@media all and (min-width:991px) {
+  .last-button {
+    margin-left: 0px;
+    margin-top: 48px;
+    order: 0;
+  }
+}
+
+.project-intro .button {
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+@media all and (min-width:991px) {
+  .project-intro .button {
+    margin-top: 48px;
+  }
+}
+
+@media all and (min-width:991px) {
+  .user-flows .process-button {
+    margin: auto;
+    margin-top: 64px;
+  }
 }
 
 /* Top Navigation */
@@ -41,25 +120,61 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 16px;
 }
 
-header img { /* Logo */
+@media all and (min-width:991px) {
+  header {
+    flex-direction: row;
+    padding: 32px;
+    margin-bottom: 0px;
+  }
+}
+
+/* Logo */
+header img {
   max-width: 32px;
   margin: 16px;
 }
 
-nav { /* Right aligned navigation links */
+@media all and (min-width:600px) {
+  header img {
+    max-width: 48px;
+    margin: 24px;
+  }
+}
+
+@media all and (min-width:991px) {
+  header img {
+    max-width: 86px;
+  }
+}
+
+/* Navigation links */
+nav {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 24px;
+}
+
+@media all and (min-width:600px) {
+  nav {
+    grid-gap: 56px;
+  }
 }
 
 /* Homepage Hero */
 .hero {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/tokyoskyline.jpg) top / cover;
   display: flex;
-  height: 375px;
+  height: 192px;
   justify-content: center;
+}
+
+@media all and (min-width:991px) {
+  .hero {
+    height: 672px;
+  }
 }
 
 .hero .hero-text {
@@ -68,14 +183,35 @@ nav { /* Right aligned navigation links */
   text-align: center;
 }
 
+@media all and (min-width:991px) {
+  .hero-text {
+    line-height: 36px;
+    max-width: 834px;
+  }
+}
+
 .hero-text h1 {
   margin-bottom: 20px;
+}
+
+@media all and (min-width:991px) {
+  .hero-text h1 {
+    margin-bottom: 48px;
+  }
 }
 
 /* Projects Listed on Homepage */
 .bridgecloud img { /* Project Image */
   max-width: 327px;
   margin-bottom: 32px;
+}
+
+@media all and (min-width:991px) {
+  .bridgecloud img {
+    float: right;
+    max-width: 684px;
+    position: relative;
+  }
 }
 
 .project {
@@ -85,31 +221,32 @@ nav { /* Right aligned navigation links */
   text-align: center;
 }
 
+@media all and (min-width:991px) {
+  .project {
+    margin: 144px 128px;
+    text-align: left;
+  }
+}
+
 .project h1 {
   margin-bottom: 8px;
+}
+
+@media all and (min-width:991px) {
+  .project h1 {
+    margin-bottom: 56px;
+  }
 }
 
 .project h2 {
   margin-bottom: 24px;
 }
 
-/* Buttons*/
-.button, .horizontal-align-button, .process-button {
-  display: inline-block;
-  background-color: #C2E2FF; /* blue */
-  box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.6);
-  font-weight: bold;
-  padding: 24px 40px;
-  text-align: center;
-  width: 201px;
-}
-
-.horizontal-align-button {
-  margin-left: 318px;
-}
-
-.project-intro .button {
-  margin-top: 24px;
+@media all and (min-width:991px) {
+  .project h2 {
+    margin-bottom: 96px;
+    max-width: 484px;
+  }
 }
 
 /* Footer */
@@ -117,6 +254,22 @@ nav { /* Right aligned navigation links */
   background-color: #EDEDED;
   padding: 16px;
   text-align: center;
+}
+
+@media all and (min-width:991px) {
+  .contact {
+    padding: 32px;
+  }
+}
+
+.contact h1, h1.process {
+  margin-bottom: 8px;
+}
+
+@media all and (min-width:991px) {
+  .contact h1, h1.process {
+    margin-bottom: 32px;
+  }
 }
 
 .social-networking {
@@ -131,279 +284,658 @@ nav { /* Right aligned navigation links */
   height: 10vmax;
 }
 
-.contact h1, h1.process {
-  margin-bottom: 8px;
-}
-
-/* Desktop View */
 @media all and (min-width:991px) {
-  body {
-    font-size: 2.0rem;
-  }
-
-  h1 {
-    font-size: 5.6rem;
-  }
-
-  h2 {
-    font-size: 2.8rem;
-    line-height: 36px;
-  }
-
-  nav { /* Navigation links */
-    grid-gap: 56px;
-  }
-
-  header {
-    flex-direction: row;
-    padding: 32px;
-  }
-
-  header img { /* Logo */
-    max-width: 86px;
-  }
-
-  .hero {
-    height: 672px;
-  }
-
-  .hero-text h1 {
-    margin-bottom: 48px;
-  }
-
-  .project {
-    margin: 144px 128px;
-    text-align: left;
-  }
-
-  .bridgecloud img { /* Project Image */
-    float: right;
-    max-width: 684px;
-    position: relative;
-  }
-
-  .project h1 {
-    margin-bottom: 56px;
-  }
-
-  .project h2 {
-    margin-bottom: 96px;
-    max-width: 484px;
-  }
-
-  .button {
-    width: 284px;
-  }
-
-  .horizontal-align-button {
-    margin-left: 318px;
-  }
-
-  .project-intro .button {
-    margin-top: 48px;
-  }
-
-  .process-button {
-    margin-top: 64px;
-  }
-
   .social-networking img {
     padding: 28px;
     height: 7vmax;
   }
+}
 
-  .contact {
-    padding: 32px;
-  }
+/* Case Studies Page */
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+}
 
-  .contact h1, h1.process {
-    margin-bottom: 32px;
-  }
+/* Line Heights and P widths */
+main p, .about-personas, .about-patricia {
+  line-height: 15px;
+  max-width: 327px;
+}
 
-  main {
-    margin: 0px;
-    padding: 0px;
-  }
-
+@media all and (min-width:991px) {
   main p, .about-personas, .about-patricia {
     line-height: 26px;
     max-width: 584px;
   }
 }
 
-/* Images */
-.top-image {
-  background-color: #F6F6F6;
+/* Centered content */
+.mockups-prototypes, .user-flows, .wireframes {
+  text-align: center;
+}
+
+.user-flows p, .wireframes p, .mockups-prototypes p {
+  margin: auto;
+}
+
+/* Horizontal alignment for desktop */
+@media all and (min-width:991px) {
+  .competition, .personas {
+    flex-wrap: wrap;
+  }
+}
+
+/* Borders and Padding for each section */
+.branding, .competition, .conclusion, .logo, .mockups-prototypes, .personas, .research, .testing, .user-stories-mvp, .user-testing, .user-flows, .wireframes, .work-together {
+  border-top: 1px solid;
+  border-color: #DFCCC8;
   display: flex;
-  height: 672px;
+  flex-direction: column;
+  padding: 32px 24px;
 }
 
-.top-image img {
-  align-items: center;
-  margin: auto auto auto;
+@media all and (min-width:991px) {
+  .branding, .competition, .conclusion, .logo, .mockups-prototypes, .personas, .research, .testing, .user-stories-mvp, .user-testing, .user-flows, .wireframes, .work-together {
+    padding: 80px 128px;
+  }
 }
 
+@media all and (min-width:1920px) {
+  .branding, .competition, .conclusion, .logo, .mockups-prototypes, .personas, .research, .testing, .user-stories-mvp, .user-testing, .user-flows, .wireframes, .work-together {
+    padding: 192px 320px;
+  }
+}
+
+/* Image Style and Sizes */
 .branding img, .logo img, .mockups-prototypes img, .personas img, .sketch, .user-flows img, .user-testing img, .wireframes img {
   border: 1px solid;
   border-color: #C4C4C4;
 }
 
-.branding .horizontal-image, .logo .horizontal-image, .user-testing .horizontal-image {
-  display: inline-block;
-  margin-left: 51px;
-}
-
 .horizontal-image {
-  max-height: 384px;
+  width: 32vw;
 }
 
-.vertical-image {
-  max-height: 432px;
+@media all and (min-width:991px) {
+  .vertical-image {
+    max-height: 432px;
+  }
+
+  .user-flows img {
+    margin: 64px auto;
+  }
+
+  .sketch {
+    max-width: 349px;
+  }
 }
 
-.iterations img {
-  max-width: 434px;
-  margin-right: 66px;
+/* Sections with Gray Background Color */
+.conclusion, .logo, .testing, .personas {
+  background-color: #F6F6F6;
 }
 
-.iterations img, .wireframes img {
-  margin-top: 64px;
-}
-
-.user-flows img {
-  display: block;
-  margin: 64px auto;
-}
-
-.sketch {
-  max-width: 349px;
-}
-
-.user-testing-results, .persona-image {
+/* Hero */
+.top-image {
+  background-color: #F6F6F6;
   display: flex;
+  height: 192px;
+}
+
+@media all and (min-width:991px) {
+  .top-image {
+    height: 672px;
+  }
+}
+
+.top-image img {
   align-items: center;
-  justify-content: center;
+  margin: auto auto auto;
+  max-height: 152px;
 }
 
-.user-testing img {
-  max-height: 232px;
+@media all and (min-width:991px) {
+  .top-image img {
+    max-height: 520px;
+  }
 }
 
-/* Case Study Page */
+/* Project Introduction */
+.project-intro {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+}
+
+@media all and (min-width:991px) {
+  .project-intro {
+    flex-wrap: wrap;
+    height: 416px;
+    padding: 66px 228px;
+  }
+}
+
+.project-intro h1 {
+  margin-bottom: 16px;
+}
+
+@media all and (min-width:991px) {
+  .project-intro h1 {
+    margin-bottom: 40px;
+  }
+}
+
+.project-intro h1, .project-intro p {
+  justify-content: flex-start;
+}
+
+.project-intro p {
+  margin-bottom: 24px;
+}
+
+@media all and (min-width:991px) {
+  .project-intro p {
+    margin-bottom: 48px;
+    max-width: 484px;
+  }
+}
+
+@media all and (min-width:991px) {
+  .project-intro .process-button {
+    margin: 0px;
+  }
+}
+
+.roles {
+  align-items: center;
+  border: 1px solid;
+  border-color: #DFCCC8;
+  border-radius: 50%;
+  height: 136px;
+  line-height: 15px;
+  list-style: none;
+  margin: auto;
+  text-align: center;
+  width: 136px;
+}
+
+@media all and (min-width:991px) {
+  .roles {
+    border: 3px solid;
+    border-color: #DFCCC8;
+    height: 284px;
+    line-height: 26px;
+    margin-bottom: 0px;
+    margin-left: 216px;
+    margin-top: 0px;
+    order: 2;
+    width: 284px;
+  }
+}
+
+.roles h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  margin-top: 24px;
+  text-transform: uppercase;
+}
+
+@media all and (min-width:991px) {
+  .roles h3 {
+    font-size: 2.0rem;
+    margin-bottom: 20px;
+    margin-top: 64px;
+  }
+}
+
+/* Problem and Solution */
+.problem-solution {
+  border-top: 1px solid;
+  border-color: #DFCCC8;
+  columns: 115px 2;
+  column-rule: 1px solid #DFCCC8;
+  text-align: center;
+}
+
+@media all and (min-width:991px) {
+  .problem-solution {
+    columns: 534px 2;
+  }
+}
+
+.problem, .solution {
+  padding: 24px 32px;
+}
+
+@media all and (min-width:991px) {
+  .problem, .solution {
+    padding: 80px 128px;
+  }
+}
+
+/* Research */
+.research {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../images/bridgecloudresearchbackground.jpg) bottom / cover;
+}
+
+@media all and (min-width:991px) {
+  .research {
+    flex-wrap: wrap;
+    height: 568px;
+  }
+}
+
+.process-image img {
+  display: flex;
+  margin: auto;
+  margin-top: 24px;
+  width: 327px;
+}
+
+@media all and (min-width:991px) {
+  .research .horizontal-image {
+    margin: 0px;
+    margin-top: 88px;
+    width: 483px;
+  }
+}
+
+/* Competition */
+@media all and (min-width:991px) {
+  .competition {
+    height: 497px;
+  }
+}
+
+.competition-logos {
+  margin: auto;
+}
+
+@media all and (min-width:991px) {
+  .competition logos {
+    margin-left: 166px;
+  }
+}
+
+.competition-logos img {
+  display: flex;
+  margin: auto;
+}
+
+.competition img {
+  width: 327px;
+}
+
+@media all and (min-width:991px) {
+  .competition img {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    width: 70%;
+  }
+}
+
+.competition p {
+  margin-bottom: 24px;
+}
+
+/* Personas */
 .about-patricia {
-  margin-top: 32px;
+  margin-top: 24px;
   justify-content: center;
   text-align: center;
+}
+
+@media all and (min-width:991px) {
+  .about-patricia {
+    margin-top: 32px;
+  }
 }
 
 .about-personas lh {
   font-weight: bold;
 }
 
-.branding p, .logo p, .user-testing p {
-  margin-right: 66px;
-  max-width: 384px;
+@media all and (min-width:991px) {
+  .personas {
+    height: 673px;
+  }
 }
 
-.branding, .competition, .conclusion, .logo, .mockups-prototypes, .personas, .research, .testing, .user-stories-mvp, .user-testing, .user-flows, .wireframes {
-  border-top: 1px solid;
-  border-color: #DFCCC8;
-  padding: 80px 128px;
+.persona-image, .user-flows .horizontal-image {
+  margin: auto;
+  margin-top: 24px;
 }
 
-.competition, .user-testing, .personas {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+@media all and (min-width:991px) {
+  .persona-image {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.competition-logos, .persona-image {
+.persona-name {
+  font-size: 1.4rem;
+  line-height: 16px;
+}
+
+@media all and (min-width:991px) {
+  .persona-name {
+    font-size: 2.4rem;
+    line-height: 28px;
+  }
+}
+
+/* User Stories + MVP */
+.user-stories-mvp {
   display: flex;
   flex-direction: column;
 }
 
-.competition img {
-  width: 70%;
+@media all and (min-width:991px) {
+  .user-stories-mvp {
+    flex-wrap: wrap;
+    height: 433px;
+  }
 }
 
-.conclusion {
-  border-bottom: 1px solid;
-  border-color: #DFCCC8;
-  text-align: center;
-}
-
-.conclusion, .logo, .testing, .personas {
-  background-color: #F6F6F6;
-}
-
-.conclusion p {
+.user-stories-mvp .horizontal-align-button {
   margin: auto;
+  margin-top: 32px;
 }
 
-.horizontal-alignment p, .horizontal-align-button, .wireframes img, .sketch {
-  display: inline-block;
-  vertical-align: top;
+@media all and (min-width:991px) {
+  .user-stories-mvp .horizontal-align-button {
+    margin: auto;
+  }
 }
 
-.mockups-prototypes, .user-flows, .wireframes {
-  text-align: center;
-}
-
-.persona-name {
-  font-size: 2.4rem;
-  line-height: 28px;
-}
-
-.problem-solution {
-  border-top: 1px solid;
-  border-color: #DFCCC8;
-  columns: 534px 2;
-  column-rule: 1px solid #DFCCC8;
-  text-align: center;
-}
-
-.problem, .solution {
-  padding: 80px 128px;
-}
-
-.project-intro {
-  margin: 66px 228px;
-}
-
-.project-intro h1 {
-  margin-bottom: 40px;
-}
-
-.project-intro p {
-  max-width: 484px;
-}
-
-.project-intro .roles {
-  border: 3px solid;
-  border-color: #DFCCC8;
-  border-radius: 50%;
-  height: 284px;
-  float: right;
-  line-height: 26px;
-  text-align: center;
-  width: 284px;
-}
-
-.research {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../images/bridgecloudresearchbackground.jpg) bottom / cover;
-}
-
-.roles h3 {
-  font-size: 2.0rem;
-  margin-bottom: 20px;
-  margin-top: 64px;
-  text-transform: uppercase;
-}
-
+/* User Flows */
 .user-flows {
   background: linear-gradient(to right, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url(../images/bridgeclouduserflowsbackground.jpg) center / cover;
 }
 
-.user-flows p, .wireframes p, .mockups-prototypes p { /* Centered content */
+.user-flows .horizontal-image {
+  width: 327px;
+}
+
+@media all and (min-width:991px) {
+  .user-flows .horizontal-image {
+    margin-top: 64px;
+    width: 484px;
+  }
+}
+
+/* Wireframes */
+.iterations {
+  display: flex;
+  flex-direction: column;
   margin: auto;
+}
+
+@media all and (min-width:991px) {
+  .iterations {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.iterations img {
+  margin-top: 24px;
+}
+
+.iterations img, .sketch, .vertical-image {
+  max-width: 327px;
+}
+
+@media all and (min-width:991px) {
+  .iterations .horizontal-image {
+    margin-top: 64px;
+    margin-bottom: 0px;
+  }
+
+  .iterations img {
+    margin-top: 64px;
+    max-width: 434px;
+    margin-right: 66px;
+  }
+}
+
+.wireframes .horizontal-image {
+  width: 327px;
+}
+
+@media all and (min-width:991px) {
+  .wireframes .horizontal-image {
+    width: 434px;
+  }
+}
+
+.wireframes .process-button {
+  margin: 32px auto;
+}
+
+@media all and (min-width:991px) {
+  .wireframes .process-button {
+    margin-top: 64px;
+  }
+}
+
+/* Testing Wireframes */
+@media all and (min-width:991px) {
+  .testing {
+    flex-wrap: wrap;
+    height: 329px;
+  }
+}
+
+@media all and (min-width:991px) {
+  .testing .horizontal-align-button {
+    margin: auto;
+  }
+}
+
+/* Branding and Logo Sections */
+.branding .sketch, .branding .horizontal-image, .logo .sketch, .logo .horizontal-image {
+  width: 327px;
+}
+
+@media all and (min-width:991px) {
+  .branding {
+    height: 584px;
+    flex-wrap: wrap;
+  }
+}
+
+@media all and (min-width:991px) {
+  .branding .horizontal-image {
+    width: 434px;
+  }
+}
+
+.branding img, .logo img {
+  margin: auto;
+}
+
+@media all and (min-width:991px) {
+  .branding img, .logo img {
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0px;
+    margin-top: 88px;
+  }
+}
+
+@media all and (min-width:991px) {
+  .branding p {
+    width: 334px;
+  }
+}
+
+.branding .sketch, .logo .sketch {
+  margin-bottom: 24px;
+}
+
+@media all and (min-width:991px) {
+  .branding .sketch {
+    margin-bottom: 0px;
+  }
+}
+
+@media all and (min-width:991px) {
+  .logo {
+    height: 566px;
+    flex-wrap: wrap;
+  }
+}
+
+@media all and (min-width:991px) {
+  .logo p {
+    width: 384px;
+  }
+}
+
+/* User Testing Section */
+.user-testing-results {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-testing-results img {
+  margin: 24px auto;
+  width: 327px;
+}
+
+@media all and (min-width:991px) {
+  .user-testing {
+    flex-wrap: wrap;
+    height: 497px;
+  }
+}
+
+@media all and (min-width:991px) {
+  .user-testing-results {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+
+@media all and (min-width:991px) {
+  .user-testing .horizontal-image {
+    max-height: 232px;
+    max-width: 376px;
+    margin-left: 51px;
+    margin-top: 88px;
+  }
+}
+
+/* Conclusion */
+.conclusion {
+  align-items: center;
+  text-align: center;
+}
+
+/* Work Together */
+@media all and (min-width:991px) {
+  .work-together {
+    flex-wrap: wrap;
+    height: 352px;
+  }
+}
+
+@media all and (min-width:991px) {
+  .work-together .horizontal-align-button {
+    margin-top: 88px;
+  }
+}
+
+/* Back to top button */
+.back-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+  margin-top: 32px;
+}
+
+@media all and (min-width:991px) {
+  .back-to-top {
+    margin-bottom: 80px;
+    margin-top: 0px;
+  }
+}
+
+.back-to-top .round-button {
+  display: inline-block;
+  background-color: #C2E2FF; /* blue */
+  border-radius: 50%;
+  box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.round-button .arrow {
+  border-style: solid;
+  border-color: #292728;
+  border-width: .4vmin .4vmin 0 0;
+	width: 2vmin;
+	height: 2vmin;
+	box-sizing: border-box;
+	left: 50%;
+	top: 50%;
+	transform: rotate(-45deg);
+  margin: auto;
+}
+
+/* About*/
+.about-hero {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(../images/aboutme.jpg);
+  background-size: cover;
+  background-position: 0 -65px;
+  height: 192px;
+}
+
+@media all and (min-width:991px) {
+  .about-hero {
+    background-position: 0 -280px;
+    height: 672px;
+  }
+}
+
+.about-me {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 32px 24px;
+}
+
+@media all and (min-width:991px) {
+  .about-me {
+    margin: 144px 128px;
+  }
+}
+
+.about-me h1 {
+  margin-bottom: 16px;
+}
+
+@media all and (min-width:991px) {
+  .about-me h1 {
+    margin-bottom: 40px;
+  }
+}
+
+.about-me p {
+  line-height: 16px;
+}
+
+@media all and (min-width:991px) {
+  .about-me p {
+    line-height: 28px;
+  }
 }
