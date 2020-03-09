@@ -20,6 +20,14 @@ body {
   }
 }
 
+@media all and (min-width:1920px) {
+  body {
+    max-width: 1024px;
+    margin: auto;
+    justify-content: center;
+  }
+}
+
 /* Typography */
 h1 {
   font-family: 'Yeseva One';
@@ -343,12 +351,6 @@ main p, .about-personas, .about-patricia {
   }
 }
 
-@media all and (min-width:1920px) {
-  .branding, .competition, .conclusion, .logo, .mockups-prototypes, .personas, .research, .testing, .user-stories-mvp, .user-testing, .user-flows, .wireframes, .work-together {
-    padding: 192px 320px;
-  }
-}
-
 /* Image Style and Sizes */
 .branding img, .logo img, .mockups-prototypes img, .personas img, .sketch, .user-flows img, .user-testing img, .wireframes img {
   border: 1px solid;
@@ -525,6 +527,8 @@ main p, .about-personas, .about-patricia {
   .research {
     flex-wrap: wrap;
     height: 568px;
+    justify-content: center;
+    padding: 0px 128px;
   }
 }
 
@@ -538,7 +542,6 @@ main p, .about-personas, .about-patricia {
 @media all and (min-width:991px) {
   .research .horizontal-image {
     margin: 0px;
-    margin-top: 88px;
     width: 483px;
   }
 }
@@ -547,6 +550,8 @@ main p, .about-personas, .about-patricia {
 @media all and (min-width:991px) {
   .competition {
     height: 497px;
+    justify-content: center;
+    padding: 0px 128px;
   }
 }
 
@@ -601,6 +606,8 @@ main p, .about-personas, .about-patricia {
 
 @media all and (min-width:991px) {
   .personas {
+    justify-content: center;
+    padding: 0px 128px;
     height: 673px;
   }
 }
@@ -614,6 +621,7 @@ main p, .about-personas, .about-patricia {
   .persona-image {
     display: flex;
     flex-direction: column;
+    margin: auto;
   }
 }
 
@@ -639,6 +647,7 @@ main p, .about-personas, .about-patricia {
   .user-stories-mvp {
     flex-wrap: wrap;
     height: 433px;
+    padding: 80px 128px;
   }
 }
 
@@ -729,6 +738,7 @@ main p, .about-personas, .about-patricia {
   .testing {
     flex-wrap: wrap;
     height: 329px;
+    padding: 80px 128px;
   }
 }
 
@@ -747,6 +757,8 @@ main p, .about-personas, .about-patricia {
   .branding {
     height: 584px;
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 128px;
   }
 }
 
@@ -789,6 +801,8 @@ main p, .about-personas, .about-patricia {
   .logo {
     height: 566px;
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 128px;
   }
 }
 
@@ -813,6 +827,8 @@ main p, .about-personas, .about-patricia {
   .user-testing {
     flex-wrap: wrap;
     height: 497px;
+    justify-content: center;
+    padding: 0px 128px;
   }
 }
 
@@ -844,6 +860,7 @@ main p, .about-personas, .about-patricia {
   .work-together {
     flex-wrap: wrap;
     height: 352px;
+    padding: 80px 128px;
   }
 }
 
@@ -880,16 +897,16 @@ main p, .about-personas, .about-patricia {
 }
 
 .round-button .arrow {
-  border-style: solid;
   border-color: #292728;
+  box-sizing: border-box;
+  border-style: solid;
   border-width: .4vmin .4vmin 0 0;
+  margin: auto;
 	width: 2vmin;
 	height: 2vmin;
-	box-sizing: border-box;
 	left: 50%;
 	top: 50%;
 	transform: rotate(-45deg);
-  margin: auto;
 }
 
 /* About*/
@@ -902,7 +919,9 @@ main p, .about-personas, .about-patricia {
 
 @media all and (min-width:991px) {
   .about-hero {
-    background-position: 0 -280px;
+    background-position: center -285px;
+    background-repeat: no-repeat;
+    background-size: auto;
     height: 672px;
   }
 }
